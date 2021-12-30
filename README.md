@@ -1,24 +1,46 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| column             | type       | options                       |
+| ------------------ | ---------- | ----------------------------- |
+| nickname           | string     | null: false                   |
+| email              | string     | null: false, uniqueness: true |
+| encrypted_password | string     | null: false                   |
+| fav_col_id         | integer    | null: false                   |
 
-* Ruby version
+### Association
+- has_many :prototypes
+- has_many :likes
 
-* System dependencies
+## prototype テーブル
 
-* Configuration
+| column                | type       | options                       |
+| --------------------- | ---------- | ----------------------------- |
+| image                 |            | null: false                   |
+| season_id             | integer    | null: false, uniqueness: true |
+| main_tops_category_id | integer    | null: false                   |
+| main_tops_col_id      | integer    | null: false                   |
+| tops_category_id      | integer    |                               |
+| tops_col_id           | integer    |                               |
+| bottom_category_id    | integer    |                               |
+| bottom_col_id         | integer    |                               |
+| acc_category_id       | integer    |                               |
+| acc_col_id            | integer    |                               |
+| text                  | text       | null: false                   |
+| user                  | references | null: false, foreign_key:true |
 
-* Database creation
+### Association
+- belongs_to :user
+- has_many   :likes
 
-* Database initialization
+## like テーブル
 
-* How to run the test suite
+| column            | type       | options                        |
+| ----------------- | ---------- | ------------------------------ |
+| user              | references | null: false, foreign_key: true |
+| prototype         | references | null: false, foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :user
+- belongs_to :prototype
