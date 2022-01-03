@@ -52,7 +52,7 @@ body{
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #2ecc71;;
+  border: 2px solid #2ecc71;
   padding: 14px 40px;
   outline: none;
   color: white;
@@ -85,4 +85,23 @@ body{
 .color:focus{
   width: 280px;
   border-color: #2ecc71;
+}
+
+.sign-up{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #d12ea0;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.sign-up:hover{
+  background: #d12ea0;
 }
