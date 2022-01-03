@@ -30,7 +30,7 @@
 
       <div class="field">
         <%= f.label :favorite_color %><br />
-        <%= f.text_field :nickname %>      <%# <%= f.collection_select("", "", "", "", {}, {class:"select-box", id:"item-category"}) %>
+        <%= f.collection_select(:fav_col_id, Color.all, :id, :name, {}, {class:"color"}) %>
       </div>
 
       <div class="actions">

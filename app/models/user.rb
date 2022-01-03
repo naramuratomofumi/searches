@@ -3,4 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :color
+  
+  validates :nickname, presence: true
+  validates :fav_col_id, numericality: { other_than: 1, messeage: "can't be blank"}
 end
