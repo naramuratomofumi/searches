@@ -1,9 +1,8 @@
 <div class="body">
   <div class="box">
     <h2>Sign Up</h2>
-    <%= form_with model: @user, url: new_user_registration_path, local: true do |f| %>
-    
-    <%= render "devise/shared/error_messages", resource: resource %>
+    <%= form_with model: @user, url: user_registration_path, methot: :post, class: 'new_user', local: true do |f| %>
+      <%= render "devise/shared/error_messages", model: f.object %>
 
       <div class="field">
         <%= f.label :nickname %><br />
