@@ -1,6 +1,6 @@
 <div class="body">
   <div class="box">
-    <h2>Log in</h2>
+    <h2>SIGN IN</h2>
     <%= form_with model: @user, url: user_session_path, methot: :post, class: 'new_user', local: true do |f| %>
     <div class='login-flash-message'>
       <%= flash[:notice] %>
@@ -22,6 +22,7 @@
       </div>
 
       <h3>アカウントを持ってないですか？</h3>
+      <p class='info-text'>※こちらからアカウントを作成してください</p>
       <div class="actions">
         <%= link_to 'SIGN UP', new_user_registration_path, class: "sign-up" %>
       </div>
