@@ -9,4 +9,5 @@ class User < ApplicationRecord
   
   validates :nickname, presence: true
   validates :fav_col_id, numericality: { other_than: 1, messeage: "can't be blank"}
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
 end
