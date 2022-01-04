@@ -59,3 +59,5 @@ gem 'devise'
 gem 'active_hash'
 
 gem 'rails-i18n'
+
+gem 'rspec-rails', '~> 4.0.0'
