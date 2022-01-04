@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        fav_col_id: 好きな色

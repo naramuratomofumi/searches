@@ -8,6 +8,6 @@ class User < ApplicationRecord
   belongs_to :color
   
   validates :nickname, presence: true
-  validates :fav_col_id, numericality: { other_than: 1, messeage: "can't be blank"}
-  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
+  validates :fav_col_id, numericality: { other_than: 1, message: "が選択されていません"}
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: "は半角数字で入力してください"}
 end
