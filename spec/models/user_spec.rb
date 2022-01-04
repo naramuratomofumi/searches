@@ -1,9 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  before do
+    @user = FactoryBot.build(:user)
+  end
+
   describe 'ユーザー新規登録' do
     context '新規登録ができる時' do
-      it 'ニックネーム,メールアドレス,パスワード,パスワード(確認),好きな色の6つが存在すれば登録できる'
+      it 'ニックネーム,メールアドレス,パスワード,パスワード(確認),好きな色の6つが存在すれば登録できる' do
+      end
     end
 
     context 'ユーザーの新規登録ができない時' do
