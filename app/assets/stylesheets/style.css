@@ -1,0 +1,233 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+
+.header {
+  background-color: #00213b;
+  padding: 20px 0;
+}
+.inner {
+  margin: 0 50px;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 200px;
+  color: #cee2df;
+}
+.nav__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #cee2df;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #cee2df solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.nav__btn:hover{
+  color: #150201;
+  background: #cee2df;
+}
+
+.nav__logout{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #cee2df;
+  text-decoration: none;
+  user-select: none;
+}
+.nav__logout:hover{
+  opacity: 0.5;
+}
+
+
+/*メインページのスタイル*/
+.wrapper {
+  display: flex;
+}
+.side{
+  color:#cee2df;
+  background-color: #150201;
+  width: 300px;
+  height: 100vh;
+}
+.main{
+  background-color:#cee2df;
+  width: calc(100vw - 300px);
+}
+
+/*ログインフォームのエリア内のスタイル*/
+.box{
+  width: 400px;
+  padding: 40px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #150201;
+  text-align: center;
+}
+
+.box{
+  color: #cee2df;
+  font-weight: 500;
+}
+
+/* ユーザーIDとパスワード入力ボックスのスタイル */
+.box input[type="text"], .box input[type="email"], .box input[type="password"]{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  border: 2px solid #cee2df;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #cee2df;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+/* 入力ボックスがフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
+.box input[type="text"]:focus, .box input[type="email"]:focus, .box input[type="password"]:focus{
+  width: 280px;
+  border-color: #00213b;
+}
+
+/* 好きなカラーの入力ボックスのスタイル） */
+.color{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  border: 2px solid #cee2df;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #cee2df;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+/* 入力ボックス(好きなカラー)がフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
+
+.color:focus{
+  width: 280px;
+  border-color: #00213b;
+}
+
+/* Loginボタンのスタイル */
+.box input[type="submit"]{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #cee2df;
+  padding: 14px 40px;
+  outline: none;
+  color: #cee2df;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+/* Loginボタンをマウスオーバーしたときのスタイル */
+.box input[type="submit"]:hover{
+  background: #cee2df;
+  color: #150201;
+}
+
+/* SignUpとSignInの切り替えボタンのスタイル */
+
+.sign-up{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #cee2df;
+  padding: 14px 40px;
+  outline: none;
+  color: #cee2df;
+  border-radius: 100px;
+  transition: 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 140px;
+  font-size: 13px;
+}
+
+/* SignUpとSignInをマウスオーバーしたときのスタイル */
+
+.sign-up:hover{
+  background: #00213b;
+}
+
+/* ※英字と数字の両方を含めて設定してくださいのスタイル */
+
+.info-text{
+  font-size: 1px;
+  margin-top: none;
+}
+
+/* エラーメッセージのスタイル */
+
+.error-alert{
+  display: flex;
+  justify-content: center;
+}
+
+.error-message {
+  text-align: left;
+  font-size: 5px;
+  list-style: none;
+  color: red;
+}
+
+.login-flash-message{
+  font-size: 5px;
+  color: red; 
+}
