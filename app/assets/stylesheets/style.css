@@ -39,6 +39,10 @@ a {
 .header {
   background-color: #00213b;
   padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .inner {
   margin: 0 50px;
@@ -90,10 +94,21 @@ a {
   background-color: #150201;
   width: 300px;
   height: 100vh;
+  padding-top: 90px;
 }
 .main{
   background-color:#cee2df;
   width: calc(100vw - 300px);
+  padding-top: 90px;
+}
+
+/*メインページの画像一覧のスタイル*/
+
+.a{
+  width: 98%;
+  height: 32%;
+  margin: 10px;
+  background-color: red;
 }
 
 /*ログインフォームのエリア内のスタイル*/
@@ -231,3 +246,4 @@ a {
   font-size: 5px;
   color: red; 
 }
+
