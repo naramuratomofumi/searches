@@ -18,7 +18,7 @@
 | column                | type       | options                       |
 | --------------------- | ---------- | ----------------------------- |
 | image                 |            | null: false                   |
-| season_id             | integer    | null: false, uniqueness: true |
+| season_id             | integer    | null: false                   |
 | main_tops_category_id | integer    | null: false                   |
 | main_tops_col_id      | integer    | null: false                   |
 | tops_category_id      | integer    |                               |
