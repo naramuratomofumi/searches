@@ -18,6 +18,7 @@ div {
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
+  background-color: #cee2df;
 }
 
 li {
@@ -150,7 +151,7 @@ a {
 }
 
 /* 好きなカラーの入力ボックスのスタイル） */
-.color{
+.select_box{
   border: 0;
   background: none;
   display: block;
@@ -167,7 +168,7 @@ a {
 
 /* 入力ボックス(好きなカラー)がフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
 
-.color:focus{
+.select_box:focus{
   width: 280px;
   border-color: #00213b;
 }
