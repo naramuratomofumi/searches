@@ -4,3 +4,9 @@ ja:
       user:
         nickname: ニックネーム
         fav_col_id: 好きな色
+      prototype:
+        season_id: シーズン
+        main_tops_category_id: メイントップス
+        main_tops_col_id: メイントップスのカラー
+        text: コメント
+        image: 画像
