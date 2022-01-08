@@ -247,3 +247,25 @@ a {
   color: red; 
 }
 
+/* 好きなカラーの入力ボックスのスタイル） */
+.proto_select_box{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  border: 2px solid #00213b;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #00213b;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+/* 入力ボックス(好きなカラー)がフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
+
+.proto_select_box:focus{
+  width: 280px;
+  border-color: #150201;
+}
