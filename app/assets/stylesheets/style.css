@@ -88,18 +88,17 @@ a {
 /*メインページのスタイル*/
 .wrapper {
   display: flex;
+  margin-top: 88px;
 }
 .side{
   color:#cee2df;
   background-color: #150201;
   width: 300px;
   height: 100vh;
-  padding-top: 90px;
 }
 .main{
   background-color:#cee2df;
   width: calc(100vw - 300px);
-  padding-top: 90px;
 }
 
 /*メインページの画像一覧のスタイル*/
