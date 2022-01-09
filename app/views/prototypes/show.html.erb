@@ -15,27 +15,27 @@
       <tbody>
         <tr>
           <th class="detail_prototype">メイントップス</th>
-          <td class="detail_value"><%= "後で変更する"%></td>
-          <td class="color_value"><%= "後で変更する"%></td>
+          <td class="detail_value"><%= TopsCategory.find(@prototype.main_tops_category_id).name %></td>
+          <td class="color_value"><%= Color.find(@prototype.main_tops_col_id).name %></td>
         </tr>
         <tr>
           <th class="detail_prototype">トップス</th>
-          <td class="detail_value"><%= "後で変更する"%></td>
-          <td class="color_value"><%= "後で変更する"%></td>
+          <td class="detail_value"><%= @prototype.tops_category.name %></td>
+          <td class="color_value"><%= Color.find(@prototype.tops_col_id).name %></td>
         </tr>
         <tr>
           <th class="detail_prototype">ボトムス</th>
-          <td class="detail_value"><%= "後で変更する"%></td>
-          <td class="color_value"><%= "後で変更する"%></td>
+          <td class="detail_value"><%= @prototype.bottom_category.name %></td>
+          <td class="color_value"><%= Color.find(@prototype.bottom_col_id).name %></td>
         </tr>
         <tr>
           <th class="detail_prototype">アクセサリー</th>
-          <td class="detail_value"><%= "後で変更する"%></td>
-          <td class="color_value"><%= "後で変更する"%></td>
+          <td class="detail_value"><%= @prototype.acc_category.name %></td>
+          <td class="color_value"><%= Color.find(@prototype.acc_col_id).name %></td>
         </tr>
         <tr>
           <th class="detail_prototype">シーズン</th>
-          <td class="detail_value"><%= "後で変更する"%></td>
+          <td class="detail_value"><%= @prototype.season.name %></td>
         </tr>
       </tbody>
     </table>
