@@ -17,6 +17,10 @@ class PrototypesController < ApplicationController
     end
   end
 
+  def show
+    @prototype = Prototype.find(params[:id]) 
+  end
+
   private
   def prototype_params
     params.require(:prototype).permit(:image, :season_id, :main_tops_col_id, :main_tops_category_id, :tops_category_id, :tops_col_id, :bottom_category_id, :bottom_col_id, :acc_category_id, :acc_col_id, :text).merge(user_id: current_user.id)
