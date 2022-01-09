@@ -1,0 +1,43 @@
+<div class="prototype_show">
+  <div class="prototype_box">
+    <h2 class="nickname">
+      <%= @prototype.user.nickname %> 
+    </h2>
+    <div class="prototype-image-content">
+      <%= image_tag @prototype.image, class:"prototype_box_image"%>
+    </div>
+
+    <div class="prototype_explain_box">
+      <span><%= @prototype.text %></span>
+    </div>
+
+    <table class="detail_table">
+      <tbody>
+        <tr>
+          <th class="detail_prototype">メイントップス</th>
+          <td class="detail_value"><%= "後で変更する"%></td>
+          <td class="color_value"><%= "後で変更する"%></td>
+        </tr>
+        <tr>
+          <th class="detail_prototype">トップス</th>
+          <td class="detail_value"><%= "後で変更する"%></td>
+          <td class="color_value"><%= "後で変更する"%></td>
+        </tr>
+        <tr>
+          <th class="detail_prototype">ボトムス</th>
+          <td class="detail_value"><%= "後で変更する"%></td>
+          <td class="color_value"><%= "後で変更する"%></td>
+        </tr>
+        <tr>
+          <th class="detail_prototype">アクセサリー</th>
+          <td class="detail_value"><%= "後で変更する"%></td>
+          <td class="color_value"><%= "後で変更する"%></td>
+        </tr>
+        <tr>
+          <th class="detail_prototype">シーズン</th>
+          <td class="detail_value"><%= "後で変更する"%></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
