@@ -263,9 +263,153 @@ a {
   transition: 0.25s;
 }
 
-/* 入力ボックス(好きなカラー)がフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
-
 .proto_select_box:focus{
   width: 280px;
   border-color: #150201;
+}
+
+/* 投稿画面のスタイル */
+
+.prototype_wrapper {
+  display: flex;
+  margin-top: 88px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prototypes_contents{
+  font-size:14px;
+  display: flex;
+  min-width: 500px;
+  margin-top: 30px;
+}
+
+.prototype_main{
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 15vw
+}
+
+.prototype_title{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #150201;
+  color: #cee2df;
+  margin-bottom: 20px;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #cee2df;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.image-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+.new_prototype{
+  padding: 1vh 0;
+}
+
+.prototype_coments{
+  margin-top: 2vh;
+}
+
+.text_box{
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 2px solid #150201;
+  font-size: 16px;
+  resize: none;
+}
+
+.tops{
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 0;
+  background-color: #cee2df;
+  margin: 10px;
+  padding: 10px;
+}
+
+.tops>.form {
+  width: 300px;
+  padding:1vh 0;
+}
+
+.prototype_btn_contents{
+  width: 100%;
+  text-align: center;
+}
+
+.prototype_btn{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #150201;
+  padding: 14px 40px;
+  outline: none;
+  color: #150201;
+  border-radius: 100px;
+  transition: 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 200px;
+  font-size: 13px;
+}
+
+.prototype_btn:hover{
+  background: #00213b;
+  color: #cee2df;
+}
+
+.back_btn{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #150201;
+  padding: 14px 40px;
+  outline: none;
+  color: #150201;
+  border-radius: 100px;
+  transition: 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 140px;
+  font-size: 13px;
+}
+
+.back_btn:hover{
+  background: #150201;
+  color: #cee2df;
 }

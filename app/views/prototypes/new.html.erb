@@ -1,78 +1,114 @@
-<div class='wrapper'>
-  <h1>新規投稿ページ</h1>
-
-  <%= form_with model: @prototype, url: prototypes_path, local:true do |f| %>
-
-  <%= render "layouts/error_messages", model: f.object %>
+<div class='prototype_wrapper'>
+  <div class="prototypes_contents">
   
-  <div class='image-upload'>
-    <div class='weight-bold-text'>
-      コーディネート画像
-      <span class='indispensable'>※必須</span>
+    <div class="prototype_main">
+      <h2 class="prototype_title">コーディネートの詳細を入力</h2>
+      <%= form_with model: @prototype, url: prototypes_path, local:true do |f| %>
+
+      <%= render "layouts/error_messages", model: f.object %>
+      
+      <div class='image-upload'>
+        <div class='weight-bold-text'>
+          コーディネート画像
+          <span class='indispensable'>必須</span>
+        </div>
+        <div class='click-upload'>
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image %>
+        </div>
+      </div>
+
+      <div class="new_prototype">
+        
+        <div class="tops">
+          <div class="form">
+            <div class="weight-bold-text">
+              メイントップス
+              <span class='indispensable'>必須</span>
+            </div>
+            <%= f.collection_select(:main_tops_category_id, TopsCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
+          </div>
+          <div class="form">
+            <div class="weight-bold-text">
+              メイントップスのカラー
+              <span class='indispensable'>必須</span>
+            </div>
+            <%= f.collection_select(:main_tops_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
+          </div>
+        </div>
+
+        <div class="tops">
+          <div class="form">
+            <div class="weight-bold-text">
+              トップス
+            </div>
+            <%= f.collection_select(:tops_category_id, TopsCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
+          </div>
+          <div class="form">
+            <div class="weight-bold-text">
+              トップスのカラー
+            </div>
+            <%= f.collection_select(:tops_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
+          </div>
+        </div>
+
+        <div class="tops">
+          <div class="form">
+            <div class="weight-bold-text">
+              ボトムス
+            </div>
+            <%= f.collection_select(:bottom_category_id, BottomCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
+          </div>
+          <div class="form">
+            <div class="weight-bold-text">
+              ボトムスのカラー
+            </div>
+            <%= f.collection_select(:bottom_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
+          </div>
+        </div>
+
+        <div class="tops">
+          <div class="form">
+            <div class="weight-bold-text">
+              アクセサリー
+            </div>
+            <%= f.collection_select(:acc_category_id, AccCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
+          </div>
+          <div class="form">
+            <div class="weight-bold-text">
+              アクセサリーのカラー
+            </div>
+            <%= f.collection_select(:acc_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
+          </div>
+        </div>
+
+        <div class="tops">
+          <div class="form">
+            <div class="weight-bold-text">
+              おすすめのシーズン
+              <span class='indispensable'>必須</span>
+            </div>
+            <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"proto_select_box"}) %>
+          </div>
+        </div>
+
+        <div class="prototype_coments">
+          <div class="weight-bold-text">
+            コメント
+            <span class='indispensable'>必須</span>
+          </div>
+          <%= f.text_area :text, class:"text_box", placeholder:"コーディネートの詳細(1,000文字まで)", rows:"7", maxlength:"1000" %>
+          <div class='submit'>
+        </div>
+
+        <div class="prototype_btn_contents">
+          <%= f.submit '投稿する', class:"prototype_btn" %>
+          <%= link_to '戻る', root_path, class:"back_btn" %>
+        </div>
+      </div>
     </div>
-    <div class='click-upload'>
-      <p>
-        クリックしてファイルをアップロード
-      </p>
-      <%= f.file_field :image, id:'prototype-image' %>
-    </div>
-  </div>
-
-  <div class="weight-bold-text">
-    おすすめのシーズン
-    <span class='indispensable'>※必須</span>
-  </div>
-  <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"proto_select_box"}) %>
-  
-  <div class="weight-bold-text">
-    メイントップス
-    <span class='indispensable'>※必須</span>
-  </div>
-  <%= f.collection_select(:main_tops_category_id, TopsCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
-
-  <div class="weight-bold-text">
-    メイントップスのカラー
-    <span class='indispensable'>※必須</span>
-  </div>
-  <%= f.collection_select(:main_tops_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
-
-  <div class="weight-bold-text">
-    トップス
-  </div>
-  <%= f.collection_select(:tops_category_id, TopsCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
-
-  <div class="weight-bold-text">
-    トップスのカラー
-  </div>
-  <%= f.collection_select(:tops_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
-
-  <div class="weight-bold-text">
-    ボトムス
-  </div>
-  <%= f.collection_select(:bottom_category_id, BottomCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
-
-  <div class="weight-bold-text">
-    ボトムスのカラー
-  </div>
-  <%= f.collection_select(:bottom_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
-
-  <div class="weight-bold-text">
-    アクセサリー
-  </div>
-  <%= f.collection_select(:acc_category_id, AccCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
-
-  <div class="weight-bold-text">
-    アクセサリーのカラー
-  </div>
-  <%= f.collection_select(:acc_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
-
-  <div class="weight-bold-text">
-    コメント
-    <span class='indispensable'>※必須</span>
-  </div>
-  <%= f.text_area :text, class:"text_box", placeholder:"コーディネートの詳細(1,000文字まで)", rows:"7", maxlength:"1000" %>
-  <div class='submit'>
-    <%= f.submit '投稿する' %>
   </div>
 <% end %>
 
