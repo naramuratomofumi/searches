@@ -9,6 +9,9 @@
   <div class='main'>
     <div class='a'>
       <%="検索"%>
+      <% @prototypes.each do |prototype| %>
+        <%= image_tag prototype.image.variant(resize: '300x200'), class: "prototype_image" %>
+      <% end %>
     </div>
     <div class='a'>
       <%="オススメ"%>
