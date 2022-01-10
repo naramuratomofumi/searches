@@ -5,5 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
   console.log("preview.jsが読み込まれました");
 
   const fileField = document.querySelector('input[type="file"][name="prototype[image]"]');
-
+  fileField.addEventListener('change', function(e){
+    console.log("input要素で値の変化が起きた。");
+  });
 });
