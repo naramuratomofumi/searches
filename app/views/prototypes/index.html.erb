@@ -8,10 +8,14 @@
   </div>
   <div class='main'>
     <div class='a'>
-      <%="検索"%>
-      <% @prototypes.each do |prototype| %>
-        <%= image_tag prototype.image.variant(resize: '300x200'), class: "prototype_image" %>
-      <% end %>
+      <%="新着"%>
+      <div class="b">
+        <% @prototypes.each do |prototype| %>
+          <%=link_to prototype_path(prototype.id) do %>
+            <%= image_tag prototype.image.variant(resize: '300x200'), class: "prototype_image" %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
     <div class='a'>
       <%="オススメ"%>
