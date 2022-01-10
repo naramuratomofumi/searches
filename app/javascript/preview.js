@@ -7,5 +7,6 @@ document.addEventListener('DOMContentLoaded', function(){
   const fileField = document.querySelector('input[type="file"][name="prototype[image]"]');
   fileField.addEventListener('change', function(e){
     console.log("input要素で値の変化が起きた。");
+    console.log(e.target.files[0]);
   });
 });
