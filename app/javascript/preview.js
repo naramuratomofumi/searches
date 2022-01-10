@@ -9,5 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const blob = window.URL.createObjectURL(file);
     const previewWrapper = document.createElement('div');
     previewWrapper.setAttribute('class', 'preview');
+    const previewImage = document.createElement('img');
+    previewImage.setAttribute('class', 'preview-image');
   });
 });
