@@ -3,7 +3,7 @@
   
     <div class="prototype_main">
       <h2 class="prototype_title">コーディネートの詳細を入力</h2>
-      <%= form_with model: @prototype, url: prototypes_path, local:true do |f| %>
+      <%= form_with model: @prototype, url: prototypes_path, id:'new_prototype', local:true do |f| %>
 
       <%= render "layouts/error_messages", model: f.object %>
       

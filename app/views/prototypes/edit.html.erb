@@ -3,7 +3,7 @@
   
     <div class="prototype_main">
       <h2 class="prototype_title">コーディネートの詳細を入力</h2>
-      <%= form_with model: @prototype, url: prototype_path, local:true do |f| %>
+      <%= form_with model: @prototype, url: prototype_path, id:'new_prototype', local:true do |f| %>
 
       <%= render "layouts/error_messages", model: f.object %>
       
@@ -12,6 +12,7 @@
           コーディネート画像
           <span class='indispensable'>必須</span>
         </div>
+        <div id='previews'></div>
         <div class='click-upload'>
           <p>
             クリックしてファイルをアップロード
