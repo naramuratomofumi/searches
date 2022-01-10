@@ -2,13 +2,16 @@
 <div class="wrapper">
 
   <div class='side'>
-   <div class='seach_index'>
+   <div class='search_index'>
     <%= '<Go Search>'%>
    </div>
   </div>
   <div class='main'>
-    <div class='a'>
-      <%="新着"%>
+    <div class="index-text">
+      New
+    </div>
+    <div class='index_image_content'>
+      
       <div class="b">
         <% @prototypes.each do |prototype| %>
           <%=link_to prototype_path(prototype.id) do %>
@@ -17,11 +20,14 @@
         <% end %>
       </div>
     </div>
-    <div class='a'>
-      <%="オススメ"%>
+
+    <div class="index-text">おすすめ</div>
+    <div class='index_image_content'>
     </div>
-    <div class='a'>
-      <%="人気"%>
+
+    <div class="index-text">人気</div>
+    <div class='index_image_content'>
     </div>
+
   </div>
 </div>

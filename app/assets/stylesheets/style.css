@@ -100,23 +100,38 @@ a {
 .main{
   background-color:#cee2df;
   width: calc(100vw - 300px);
+  overflow: scroll;
+  height: 91vh;
 }
 
+.search_index{
+  font-size: 25px;
+  color: #cee2df;
+  margin: 10px 0 0 10px;
+}
+
+.index-text{
+  font-size: 20px;
+  color: #00213b;
+  margin: 10px 0 0 10px;
+}
 /*メインページの画像一覧のスタイル*/
 
-.a{
+.index_image_content{
   width: 98%;
-  height: 31%;
+  height: 28%;
   margin: 10px;
-  background-color: red;
+  padding: 10px;
+  background-color: white;
+  overflow-x: scroll;
+  white-space: nowrap;
+  font-size: 25px;
+  color: #00213b;
 }
 
-.b{
-  display: flex;
-  align-items: center;
-}
 .prototype_image{
-  margin: 20px;
+  justify-content: space-around;
+  margin: 0 20px;
 }
 
 /*ログインフォームのエリア内のスタイル*/
