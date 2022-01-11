@@ -1,9 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Prototype, type: :model do
+  before do
+    @prototype = FactoryBot.build(:prototype)
+  end
+
   describe '投稿機能' do
     context '投稿ができる時' do
       it 'image,season_id,main_tops_category_id,main_tops_col_id,tops_category_id,tops_col_id,bottom_category_id,bottom_color_id,acc_category_id,acc_col_id,text,user_idの12項目が存在すれば投稿できる' do
+        binding.pry
+        expect(@prototype).to be_valid
       end
       it 'tops_category_idが空でも登録できる' do
       end
