@@ -12,8 +12,7 @@ class Season < ActiveHash::Base
     { id: 10, name: '11月(気温16℃未満)' },
     { id: 11, name: '12月(気温12℃未満)' }
   ]
-  
+
   include ActiveHash::Associations
   has_many :prototypes
-
 end
