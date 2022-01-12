@@ -17,4 +17,5 @@ class Color < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :users
+  has_many :prototypes
 end

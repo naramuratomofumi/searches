@@ -10,4 +10,6 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   validates :fav_col_id, numericality: { other_than: 1, message: 'が選択されていません' }
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は英字と数字の両方を含めて設定してください' }, allow_blank: true
+
+  has_many :prototypes
 end
