@@ -4,7 +4,7 @@ class PrototypesController < ApplicationController
   before_action :redirect_root, only: [:edit, :destroy]
 
   def index
-    @prototypes = Prototype.all.order('created_at DESC')
+    @prototype = Prototype.all.order('created_at DESC')
   end
 
   def new
