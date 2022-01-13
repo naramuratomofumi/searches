@@ -14,4 +14,7 @@ class User < ApplicationRecord
   has_many :prototypes
   has_many :likes
   has_many :liked_prototypes, through: :likes, source: :prototype  # userがどの投稿をいいねしているのかを簡単に取得できるようにした #
+  def already_liked?(post)
+    self.likes.exists?(prototype_id: prototype.id) # ユーザーが投稿に対して、すでにいいねをしているのかどうかを判定することができるようにalready_liked?を定義 #
+  end
 end
