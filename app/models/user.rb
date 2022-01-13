@@ -12,4 +12,6 @@ class User < ApplicationRecord
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は英字と数字の両方を含めて設定してください' }, allow_blank: true
 
   has_many :prototypes
+  has_many :likes
+  has_many :liked_prototypes, through: :likes, source: :prototype  # userがどの投稿をいいねしているのかを簡単に取得できるようにした #
 end

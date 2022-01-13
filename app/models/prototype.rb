@@ -7,6 +7,12 @@ class Prototype < ApplicationRecord
   belongs_to :color
   belongs_to :user
   has_one_attached :image
+  has_many :likes
+  has_many :liked_users, through: :likes, source: :user   # 投稿が誰にいいねしているのかを簡単に取得できるようにした #
+
+  def favorited_by?(user)
+    likes.where(user_id: user.id).exists?  # 引数で渡されたuser.idがLikeテーブル内に存在（exists?）するかどうかを調べます。#
+  end
 
   validates :season_id, numericality: { other_than: 1, message: 'が選択されていません' }
   validates :main_tops_category_id, numericality: { other_than: 1, message: 'が選択されていません' }
