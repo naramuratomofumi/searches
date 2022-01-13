@@ -1,6 +1,7 @@
 class PrototypesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_prototype, only: [:show, :edit, :destroy]
+  before_action :redirect_root, only: [:edit, :destroy]
 
   def index
     @prototypes = Prototype.all.order('created_at DESC')
@@ -50,4 +51,9 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.find(params[:id])
   end
 
+  def redirect_root
+    unless current_user.id == @prototype.user_id
+      redirect_to root_path 
+    end
+  end
 end
