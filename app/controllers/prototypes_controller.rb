@@ -4,7 +4,7 @@ class PrototypesController < ApplicationController
   before_action :redirect_root, only: [:edit, :destroy]
 
   def index
-    @prototype = Prototype.all.order('created_at DESC')
+    @prototypes = Prototype.all.order('created_at DESC')
   end
 
   def new
@@ -13,6 +13,7 @@ class PrototypesController < ApplicationController
 
   def create
     @prototype = Prototype.new(prototype_params)
+    # @prototype.user_id = current_user.id
     if @prototype.save
       redirect_to root_path
     else

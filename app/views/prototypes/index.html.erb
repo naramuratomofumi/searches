@@ -13,7 +13,7 @@
     <div class='index_image_content'>
       
       <div class="b">
-        <% @prototype.each do |prototype| %>
+        <% @prototypes.each do |prototype| %>
           <%=link_to prototype_path(prototype.id) do %>
             <%= image_tag prototype.image.variant(resize: '300x200'), class: "prototype_image" %>
           <% end %>

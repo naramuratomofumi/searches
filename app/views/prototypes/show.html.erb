@@ -7,6 +7,16 @@
       <%= image_tag @prototype.image, class:"prototype_box_image"%>
     </div>
 
+    <% if current_user.already_liked?(@prototype) %>
+      <%= link_to prototype_like_path(@prototype), method: :delete, class: "favorite_btn" do %>
+      ❤️<%= @prototype.likes.count %> いいね
+      <% end %>
+    <% else %>
+      <%= link_to prototype_likes_path(@prototype), method: :post, class: "favorite_btn" do %>
+      🖤<%= @prototype.likes.count %> いいね
+      <% end %>
+    <% end %>
+
     <div class="prototype_explain_box">
       <span><%= simple_format@prototype.text %></span>
     </div>

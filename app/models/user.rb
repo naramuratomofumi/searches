@@ -11,8 +11,8 @@ class User < ApplicationRecord
   validates :fav_col_id, numericality: { other_than: 1, message: 'が選択されていません' }
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は英字と数字の両方を含めて設定してください' }, allow_blank: true
 
-  has_many :prototypes
-  has_many :likes
+  has_many :prototypes, dependent: :destroy
+  has_many :likes, dependent: :destroy
   has_many :liked_prototypes, through: :likes, source: :prototype  # userがどの投稿をいいねしているのかを簡単に取得できるようにした #
   def already_liked?(prototype)
     self.likes.exists?(prototype_id: prototype.id) # ユーザーが投稿に対して、すでにいいねをしているのかどうかを判定することができるようにalready_liked?を定義 #
