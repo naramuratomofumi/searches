@@ -552,3 +552,13 @@ color: #cee2df;
 .show_btn{
   display: flex;
 }
+
+.like_btn{
+  font-size: 30px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.like_count{
+  font-size: 20px;
+}
