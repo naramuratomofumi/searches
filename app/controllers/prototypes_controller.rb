@@ -5,6 +5,7 @@ class PrototypesController < ApplicationController
 
   def index
     @prototypes = Prototype.all.order('created_at DESC')
+    @like_rank = Prototype.find(Like.group(:prototype_id).order('count(prototype_id) desc').pluck(:prototype_id))
   end
 
   def new
