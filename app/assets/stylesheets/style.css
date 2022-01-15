@@ -19,6 +19,7 @@ body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
   background-color: #cee2df;
+  
 }
 
 li {
@@ -54,6 +55,7 @@ a {
   justify-content: space-between;
 }
 .logo {
+  font-size: 30px;
   width: 200px;
   color: #cee2df;
 }
@@ -89,7 +91,7 @@ a {
 /*メインページのスタイル*/
 .wrapper {
   display: flex;
-  margin-top: 88px;
+  margin-top: 85px;
 }
 
 .side{
