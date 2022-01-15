@@ -91,11 +91,17 @@ a {
   display: flex;
   margin-top: 88px;
 }
+
 .side{
   color:#cee2df;
   background-color: #150201;
   width: 300px;
   height: 91vh;
+}
+
+.user_name{
+  font-size: 20px;
+  padding: 15px;
 }
 .main{
   background-color:#cee2df;
