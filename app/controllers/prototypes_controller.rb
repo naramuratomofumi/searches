@@ -1,7 +1,11 @@
 class PrototypesController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_prototype, only: [:show, :edit, :destroy]
+  before_action :redirect_root, only: [:edit, :destroy]
+
   def index
     @prototypes = Prototype.all.order('created_at DESC')
+    @like_rank = Prototype.find(Like.group(:prototype_id).order('count(prototype_id) desc').pluck(:prototype_id))
   end
 
   def new
@@ -10,6 +14,7 @@ class PrototypesController < ApplicationController
 
   def create
     @prototype = Prototype.new(prototype_params)
+    # @prototype.user_id = current_user.id
     if @prototype.save
       redirect_to root_path
     else
@@ -18,11 +23,10 @@ class PrototypesController < ApplicationController
   end
 
   def show
-    @prototype = Prototype.find(params[:id]) 
+    @like = Like.new
   end
 
   def edit
-    @prototype = Prototype.find(params[:id])
   end
 
   def update
@@ -35,13 +39,24 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
-    prototype = Prototype.find(params[:id])
-    prototype.destroy
+    @prototype.destroy
     redirect_to root_path
   end
 
   private
+
   def prototype_params
-    params.require(:prototype).permit(:image, :season_id, :main_tops_col_id, :main_tops_category_id, :tops_category_id, :tops_col_id, :bottom_category_id, :bottom_col_id, :acc_category_id, :acc_col_id, :text).merge(user_id: current_user.id)
+    params.require(:prototype).permit(:image, :season_id, :main_tops_col_id, :main_tops_category_id, :tops_category_id,
+                                      :tops_col_id, :bottom_category_id, :bottom_col_id, :acc_category_id, :acc_col_id, :text).merge(user_id: current_user.id)
+  end
+
+  def set_prototype
+    @prototype = Prototype.find(params[:id])
+  end
+
+  def redirect_root
+    unless current_user.id == @prototype.user_id
+      redirect_to root_path 
+    end
   end
 end

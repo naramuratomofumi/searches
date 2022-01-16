@@ -5,10 +5,9 @@ class BottomCategory < ActiveHash::Base
     { id: 3, name: 'ショートパンツ' },
     { id: 4, name: 'ロングスカート(膝より下)' },
     { id: 5, name: 'ショートスカート' },
-    { id: 6, name: 'ミニスカート' },
+    { id: 6, name: 'ミニスカート' }
   ]
-  
+
   include ActiveHash::Associations
   has_many :prototypes
-
 end

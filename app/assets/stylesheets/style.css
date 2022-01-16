@@ -19,6 +19,7 @@ body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
   background-color: #cee2df;
+  
 }
 
 li {
@@ -54,6 +55,7 @@ a {
   justify-content: space-between;
 }
 .logo {
+  font-size: 30px;
   width: 200px;
   color: #cee2df;
 }
@@ -89,13 +91,19 @@ a {
 /*メインページのスタイル*/
 .wrapper {
   display: flex;
-  margin-top: 88px;
+  margin-top: 85px;
 }
+
 .side{
   color:#cee2df;
   background-color: #150201;
   width: 300px;
   height: 91vh;
+}
+
+.user_name{
+  font-size: 20px;
+  padding: 15px;
 }
 .main{
   background-color:#cee2df;
@@ -551,4 +559,14 @@ color: #cee2df;
 
 .show_btn{
   display: flex;
+}
+
+.like_btn{
+  font-size: 30px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.like_count{
+  font-size: 20px;
 }
