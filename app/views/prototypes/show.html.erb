@@ -52,18 +52,33 @@
         </tr>
         <tr>
           <th class="detail_prototype">トップス</th>
-          <td class="detail_value"><%= @prototype.tops_category.name %></td>
-          <td class="color_value"><%= Color.find(@prototype.tops_col_id).name %></td>
+          <% if @prototype.tops_category_id.nil? || @prototype.tops_col_id.nil? %>
+            <td class="detail_value"><%="---"%></td>
+            <td class="color_value"><%="---"%></td>
+          <% else %>
+            <td class="detail_value"><%= @prototype.tops_category.name %></td>
+            <td class="color_value"><%= Color.find(@prototype.tops_col_id).name %></td>
+          <% end %>
         </tr>
         <tr>
           <th class="detail_prototype">ボトムス</th>
-          <td class="detail_value"><%= @prototype.bottom_category.name %></td>
-          <td class="color_value"><%= Color.find(@prototype.bottom_col_id).name %></td>
+          <% if @prototype.bottom_category_id.nil? || @prototype.bottom_col_id.nil? %>
+            <td class="detail_value"><%="---"%></td>
+            <td class="color_value"><%="---"%></td>
+          <% else %>
+            <td class="detail_value"><%= @prototype.bottom_category.name %></td>
+            <td class="color_value"><%= Color.find(@prototype.bottom_col_id).name %></td>
+          <% end %>
         </tr>
         <tr>
           <th class="detail_prototype">アクセサリー</th>
-          <td class="detail_value"><%= @prototype.acc_category.name %></td>
-          <td class="color_value"><%= Color.find(@prototype.acc_col_id).name %></td>
+            <% if @prototype.acc_category_id.nil? || @prototype.acc_col_id.nil? %>
+              <td class="detail_value"><%="---"%></td>
+              <td class="color_value"><%="---"%></td>
+            <% else %>
+              <td class="detail_value"><%= @prototype.acc_category.name %></td>
+              <td class="color_value"><%= Color.find(@prototype.acc_col_id).name %></td>
+          <% end %>
         </tr>
         <tr>
           <th class="detail_prototype">シーズン</th>
