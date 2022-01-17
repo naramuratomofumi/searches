@@ -8,7 +8,7 @@ class User < ApplicationRecord
   belongs_to :color
 
   validates :nickname, presence: true
-  validates :fav_col_id, numericality: { other_than: 1, message: 'が選択されていません' }
+  validates :fav_col_id, numericality: { greater_than_or_equal_to:1 ,less_than_or_equal_to:15, message: 'が選択されていません' }
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は英字と数字の両方を含めて設定してください' }, allow_blank: true
 
   has_many :prototypes, dependent: :destroy
