@@ -21,14 +21,81 @@
       <%= "こんにちは #{current_user.nickname}さん"%>
     </div>
     <div class='search_index'>
-      <%= '<Go Search>'%>
+      <%= '<コーディネートを検索>'%>
+      <div class='prototype_contens' id="detailed-search-result-wrapper">
+        <%= search_form_for @q, url: root_path, html: {id: "detailed-search-form"} do |f| %>
+          <div class='col-search-field' >
+            <%= f.label :main_tops_col_id_or_tops_col_id_or_bottom_col_id_or_acc_col_id_in, 'カラーで検索', class: :search_field %>
+            <br>
+            <%= f.collection_check_boxes(:main_tops_col_id_or_tops_col_id_or_bottom_col_id_or_acc_col_id_in, Color.all, :id, :name, {}, {class:"col_select_box"})%>
+          </div>
+          <%= f.submit '検索', class: :sign_up %>
+        <% end %>
+        <%= search_form_for @q, url: root_path, html: {id: "detailed-search-form"} do |f| %>
+          <div class='search-field' >
+            <%= f.label :season_id_eq, 'シーズン'%>
+            <br>
+            <%= f.collection_select(:season_id_eq, Season.all, :id, :name, {include_blank: "---"}, {class:"search_select_box"})%>
+          </div>
+          <div class='search-field' >
+            <%= f.label :main_tops_category_id_eq, 'メイントップス'%>
+            <br>
+            <%= f.collection_select(:main_tops_category_id_eq, TopsCategory.all, :id, :name, {include_blank: "---"}, {class:"search_select_box"})%>
+          </div>
+          <div class='search-field' >
+            <%= f.label :main_tops_col_id_eq, 'メイントップスのカラー'%>
+            <br>
+            <%= f.collection_select(:main_tops_col_id_eq, Color.all, :id, :name, {include_blank: "---"}, {class:"search_select_box"})%>
+          </div>
+          <div class='search-field' >
+            <%= f.label :tops_category_id_eq, 'トップス'%>
+            <br>
+            <%= f.collection_select(:tops_category_id_eq, TopsCategory.all, :id, :name, {include_blank: "---"}, {class:"search_select_box"})%>
+          </div>
+          <div class='search-field' >
+            <%= f.label :tops_col_id_eq, 'トップスのカラー'%>
+            <br>
+            <%= f.collection_select(:tops_col_id_eq, Color.all, :id, :name, {include_blank: "---"}, {class:"search_select_box"})%>
+          </div>
+          <div class='search-field' >
+            <%= f.label :bottom_category_id_eq, 'ボトムス'%>
+            <br>
+            <%= f.collection_select(:bottom_category_id_eq, BottomCategory.all, :id, :name, {include_blank: "---"}, {class:"search_select_box"})%>
+          </div>
+          <div class='search-field' >
+            <%= f.label :bottom_col_id_eq, 'ボトムスのカラー'%>
+            <br>
+            <%= f.collection_select(:bottom_col_id_eq, Color.all, :id, :name, {include_blank: "---"}, {class:"search_select_box"})%>
+          </div>
+          <div class='search-field' >
+            <%= f.label :acc_category_id_eq, 'アクセサリー'%>
+            <br>
+            <%= f.collection_select(:acc_category_id_eq, AccCategory.all, :id, :name, {include_blank: "---"}, {class:"search_select_box"})%>
+          </div>
+          <div class='search-field' >
+            <%= f.label :acc_col_id_eq, 'アクセサリーのカラー'%>
+            <br>
+            <%= f.collection_select(:acc_col_id_eq, Color.all, :id, :name, {include_blank: "---"}, {class:"search_select_box"})%>
+          </div>
+        <%= f.submit '検索', class: :sign_up%>
+        <% end %>
+      </div>
     </div>
   </div>
   <div class='main'>
-    <div class="index-text">
-      New
+
+    <div class="index-text">Search For</div>
+    <div class='index_image_content'>
+      <div class="b">
+        <%@prototype.each do |prototype| %>
+          <%=link_to prototype_path(prototype.id) do %>
+            <%= image_tag prototype.image.variant(resize: '300x200'), class: "prototype_image" %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
-    
+
+    <div class="index-text">New</div>
     <div class='index_image_content'>
       <div class="b">
         <% @prototypes.each do |prototype| %>
@@ -37,10 +104,6 @@
           <% end %>
         <% end %>
       </div>
-    </div>
-
-    <div class="index-text">おすすめ</div>
-    <div class='index_image_content'>
     </div>
 
     <div class="index-text">人気</div>
