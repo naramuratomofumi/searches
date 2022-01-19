@@ -14,9 +14,9 @@ class Prototype < ApplicationRecord
     likes.where(user_id: user.id).exists?  # 引数で渡されたuser.idがLikeテーブル内に存在（exists?）するかどうかを調べます。#
   end
 
-  validates :season_id, numericality: { greater_than_or_equal_to:1 ,less_than_or_equal_to:10, message: 'が選択されていません' }
-  validates :main_tops_category_id, numericality: { greater_than_or_equal_to:1 ,less_than_or_equal_to:3, message: 'が選択されていません' }
-  validates :main_tops_col_id, numericality: { greater_than_or_equal_to:1 ,less_than_or_equal_to:15, message: 'が選択されていません' }
+  validates :season_id, numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 10, message: 'が選択されていません' }
+  validates :main_tops_category_id, numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 3, message: 'が選択されていません' }
+  validates :main_tops_col_id, numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 15, message: 'が選択されていません' }
   validates :text, presence: true
   validates :image, presence: true
 end
