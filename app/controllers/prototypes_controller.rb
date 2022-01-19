@@ -6,6 +6,8 @@ class PrototypesController < ApplicationController
   def index
     @prototypes = Prototype.all.order('created_at DESC')
     @like_rank = Prototype.find(Like.group(:prototype_id).order('count(prototype_id) desc').pluck(:prototype_id))
+    @q = Prototype.ransack(params[:q])
+    @prototype = @q.result
   end
 
   def new
@@ -55,8 +57,6 @@ class PrototypesController < ApplicationController
   end
 
   def redirect_root
-    unless current_user.id == @prototype.user_id
-      redirect_to root_path 
-    end
+    redirect_to root_path unless current_user.id == @prototype.user_id
   end
 end

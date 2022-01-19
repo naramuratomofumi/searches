@@ -44,14 +44,14 @@
               メイントップス
               <span class='indispensable'>必須</span>
             </div>
-            <%= f.collection_select(:main_tops_category_id, TopsCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
+            <%= f.collection_select(:main_tops_category_id, TopsCategory.all, :id, :name, {include_blank: "---"}, {class:"proto_select_box"}) %>
           </div>
           <div class="form">
             <div class="weight-bold-text">
               メイントップスのカラー
               <span class='indispensable'>必須</span>
             </div>
-            <%= f.collection_select(:main_tops_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
+            <%= f.collection_select(:main_tops_col_id, Color.all, :id, :name, {include_blank: "---"}, {class:"proto_select_box"}) %>
           </div>
         </div>
 
@@ -60,13 +60,13 @@
             <div class="weight-bold-text">
               トップス
             </div>
-            <%= f.collection_select(:tops_category_id, TopsCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
+            <%= f.collection_select(:tops_category_id, TopsCategory.all, :id, :name, {include_blank: "---"}, {class:"proto_select_box"}) %>
           </div>
           <div class="form">
             <div class="weight-bold-text">
               トップスのカラー
             </div>
-            <%= f.collection_select(:tops_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
+            <%= f.collection_select(:tops_col_id, Color.all, :id, :name, {include_blank: "---"}, {class:"proto_select_box"}) %>
           </div>
         </div>
 
@@ -75,13 +75,13 @@
             <div class="weight-bold-text">
               ボトムス
             </div>
-            <%= f.collection_select(:bottom_category_id, BottomCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
+            <%= f.collection_select(:bottom_category_id, BottomCategory.all, :id, :name, {include_blank: "---"}, {class:"proto_select_box"}) %>
           </div>
           <div class="form">
             <div class="weight-bold-text">
               ボトムスのカラー
             </div>
-            <%= f.collection_select(:bottom_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
+            <%= f.collection_select(:bottom_col_id, Color.all, :id, :name, {include_blank: "---"}, {class:"proto_select_box"}) %>
           </div>
         </div>
 
@@ -90,13 +90,13 @@
             <div class="weight-bold-text">
               アクセサリー
             </div>
-            <%= f.collection_select(:acc_category_id, AccCategory.all, :id, :name, {}, {class:"proto_select_box"}) %>
+            <%= f.collection_select(:acc_category_id, AccCategory.all, :id, :name, {include_blank: "---"}, {class:"proto_select_box"}) %>
           </div>
           <div class="form">
             <div class="weight-bold-text">
               アクセサリーのカラー
             </div>
-            <%= f.collection_select(:acc_col_id, Color.all, :id, :name, {}, {class:"proto_select_box"}) %>
+            <%= f.collection_select(:acc_col_id, Color.all, :id, :name, {include_blank: "---"}, {class:"proto_select_box"}) %>
           </div>
         </div>
 
@@ -106,7 +106,7 @@
               おすすめのシーズン
               <span class='indispensable'>必須</span>
             </div>
-            <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"proto_select_box"}) %>
+            <%= f.collection_select(:season_id, Season.all, :id, :name, {include_blank: "---"}, {class:"proto_select_box"}) %>
           </div>
         </div>
 

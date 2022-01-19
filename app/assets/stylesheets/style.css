@@ -99,12 +99,83 @@ a {
   background-color: #150201;
   width: 300px;
   height: 91vh;
+  overflow: scroll;
 }
 
 .user_name{
   font-size: 20px;
-  padding: 15px;
+  padding: 10px 15px;
 }
+
+.col-search-field{
+  font-size: 10px;
+  color: #cee2df;
+}
+
+.col_select_box{
+  font-size: 10px;
+}
+
+.search-field{
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.search_select_box{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  border: 2px solid #cee2df;
+  padding: 5px 10px;
+  width: 20px;
+  outline: none;
+  color: #cee2df;
+  border-radius: 24px;
+  transition: 0.25s;
+  width: 150px;
+}
+
+.search_select_box:hover{
+  width: 200px;
+  border-color: #cee2df;
+}
+
+.search_field{
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.sign_up{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  border: 2px solid #cee2df;
+  padding: 5px 10px;
+  outline: none;
+  color: #cee2df;
+  border-radius: 100px;
+  transition: 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100px;
+  font-size: 13px;
+}
+
+/* SignUpとSignInをマウスオーバーしたときのスタイル */
+
+.sign_up:hover{
+  background: #cee2df;
+  color: #150201;
+}
+
+/* 入力ボックス(好きなカラー)がフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
+
+
+
 .main{
   background-color:#cee2df;
   width: calc(100vw - 300px);
@@ -112,10 +183,14 @@ a {
   height: 91vh;
 }
 
+.search-index{
+  font-size: 15px;
+}
+
 .search_index{
-  font-size: 25px;
+  font-size: 18px;
   color: #cee2df;
-  margin: 10px 0 0 10px;
+  margin: 3px 0 0 10px;
 }
 
 .index-text{
@@ -176,7 +251,7 @@ a {
 }
 
 /* 入力ボックスがフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
-.box input[type="text"]:focus, .box input[type="email"]:focus, .box input[type="password"]:focus{
+.box input[type="text"]:hover, .box input[type="email"]:hover, .box input[type="password"]:hover{
   width: 280px;
   border-color: #00213b;
 }
@@ -199,9 +274,9 @@ a {
 
 /* 入力ボックス(好きなカラー)がフォーカスされたときのスタイル（幅が大きくなる＆枠の色が変わる） */
 
-.select_box:focus{
+.select_box:hover{
   width: 280px;
-  border-color: #00213b;
+  border-color: #cee2df;
 }
 
 /* Loginボタンのスタイル */

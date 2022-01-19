@@ -29,7 +29,7 @@
 
     <div class="field">
       <%= f.label :好きな色 %><br />
-      <%= f.collection_select(:fav_col_id, Color.all, :id, :name, {}, {class:"select_box"}) %>
+      <%= f.collection_select(:fav_col_id, Color.all, :id, :name, {include_blank: "---"}, {class:"select_box"}) %>
     </div>
 
     <div class="actions">
