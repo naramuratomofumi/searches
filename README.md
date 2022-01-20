@@ -28,12 +28,17 @@
 複数の指定から要件を絞って検索できるようにしたいです。
 - トップ画面にお気に入りカラーを参考にマッチしそうな画像を表示できるようにしたいです。
 - いいねの非同期通信で行えるようにしたいです。
+- 自身が投稿した画像は検索にヒットしないようにしたいです。
+- いいねがされていると投稿を削除できないので修正したいです。
+- ユーザーページを作成して自身の投稿一覧ページを実装したいです。
+- ユーザー情報を修正できるようにしたいです。
+
 
 ## データベース設計
-- [![Image from Gyazo](https://i.gyazo.com/c94051dc41487fcd42f08b8968ad59c1.png)](https://gyazo.com/c94051dc41487fcd42f08b8968ad59c1)
+[![Image from Gyazo](https://i.gyazo.com/c94051dc41487fcd42f08b8968ad59c1.png)](https://gyazo.com/c94051dc41487fcd42f08b8968ad59c1)
 
 ## 画面遷移図
-- [![Image from Gyazo](https://i.gyazo.com/c428154735e5e242d1e9dd647fab7d22.png)](https://gyazo.com/c428154735e5e242d1e9dd647fab7d22)
+[![Image from Gyazo](https://i.gyazo.com/c428154735e5e242d1e9dd647fab7d22.png)](https://gyazo.com/c428154735e5e242d1e9dd647fab7d22)
 
 ## 開発環境
 - フロントエンド：HTML,CSS/JavaScript
