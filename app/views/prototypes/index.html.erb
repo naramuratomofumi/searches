@@ -15,23 +15,25 @@
   </div>
 </header>
 <div class="wrapper">
-
   <div class='side'>
     <div class='user_name'>
       <%= "こんにちは #{current_user.nickname}さん"%>
     </div>
     <div class='search_index'>
-      <%= '<コーディネートを検索>'%>
+
       <div class='prototype_contens' id="detailed-search-result-wrapper">
         <%= search_form_for @q, url: root_path, html: {id: "detailed-search-form"} do |f| %>
           <div class='col-search-field' >
-            <%= f.label :main_tops_col_id_or_tops_col_id_or_bottom_col_id_or_acc_col_id_in, 'カラーで検索', class: :search_field %>
+            <%= f.label :main_tops_col_id_or_tops_col_id_or_bottom_col_id_or_acc_col_id_in, '☆カラーで検索☆', class: :search_field %>
             <br>
             <%= f.collection_check_boxes(:main_tops_col_id_or_tops_col_id_or_bottom_col_id_or_acc_col_id_in, Color.all, :id, :name, {}, {class:"col_select_box"})%>
           </div>
           <%= f.submit '検索', class: :sign_up %>
         <% end %>
         <%= search_form_for @q, url: root_path, html: {id: "detailed-search-form"} do |f| %>
+          <span class='search-index'>
+            <%= "★細かく検索★" %>
+          </span>
           <div class='search-field' >
             <%= f.label :season_id_eq, 'シーズン'%>
             <br>
