@@ -615,6 +615,29 @@ color: #cee2df;
   color: #cee2df;
 }
 
+.back_btn_show{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  border: 2px solid #150201;
+  padding: 14px 40px;
+  outline: none;
+  color: #150201;
+  border-radius: 100px;
+  transition: 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 200px;
+  font-size: 13px;
+}
+
+.back_btn_show:hover{
+  background: #150201;
+  color: #cee2df;
+}
+
 .prototype_destroy_btn{
   border: 0;
   background: none;
