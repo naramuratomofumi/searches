@@ -1,5 +1,9 @@
 function like (){
-  console.log("発火");
+  const submit = document.getElementById("like_btn");
+  submit.addEventListener("click", () =>{
+    console.log("クリック時発火") 
+    
+  });
 }
 
 window.addEventListener('load',like);

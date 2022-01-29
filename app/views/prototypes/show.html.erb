@@ -24,14 +24,14 @@
     </div>
 
     <% if current_user.already_liked?(@prototype) %>
-      <%= link_to prototype_like_path(@prototype), method: :delete, class: "like_btn" do %>
+      <%= link_to prototype_like_path(@prototype), method: :delete, class: "like_btn", id: "like_btn" do %>
       ❤️
       <div class="like_count">
         <%= @prototype.likes.count %>
       </div>
       <% end %>
     <% else %>
-      <%= link_to prototype_likes_path(@prototype), method: :post, class: "like_btn" do %>
+      <%= link_to prototype_likes_path(@prototype), method: :post, class: "like_btn",id: "like_btn" do %>
       🖤
       <div class="like_count">
         <%= @prototype.likes.count %>
