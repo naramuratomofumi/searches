@@ -23,21 +23,9 @@
       <%= image_tag @prototype.image, class:"prototype_box_image"%>
     </div>
 
-    <% if current_user.already_liked?(@prototype) %>
-      <%= link_to prototype_like_path(@prototype), method: :delete, class: "like_btn", id: "like_btn" do %>
-      ❤️
-      <div class="like_count">
-        <%= @prototype.likes.count %>
-      </div>
-      <% end %>
-    <% else %>
-      <%= link_to prototype_likes_path(@prototype), method: :post, class: "like_btn",id: "like_btn" do %>
-      🖤
-      <div class="like_count">
-        <%= @prototype.likes.count %>
-      </div>
-      <% end %>
-    <% end %>
+    <span id="prototype-<%= @prototype.id %>-like">
+      <%= render 'likes/like', prototype: @prototype, like: @like %>
+    </span>
 
     <div class="prototype_explain_box">
       <span><%= simple_format@prototype.text %></span>
