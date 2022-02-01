@@ -15,12 +15,12 @@
   </div>
 </header>
 <div class="contents row">
-  <p><%= @user.nickname %>さんの投稿一覧</p>
   <div class='user_page_body'>
-      <div class="">
+    <h2><%= @user.nickname %>さんの投稿一覧</h2>
+      <div class="user_image">
         <%@prototypes.each do |prototype| %>
           <%=link_to prototype_path(prototype.id) do %>
-            <%= image_tag prototype.image.variant(resize: '300x200'), class: "prototype_image" %>
+            <%= image_tag prototype.image.variant(resize: '600x400'), class: "user_prototype_image" %>
           <% end %>
         <% end %>
       </div>

@@ -675,3 +675,20 @@ color: #cee2df;
 .like_count{
   font-size: 20px;
 }
+
+.user_page_body{
+  
+  padding: 100px 0 0 0;
+}
+
+.user_image{
+  padding: 10px;
+}
+
+.user_prototype_image{
+  margin: 20px 10px 20px 10px;
+}
+
+h2{
+  text-align: center;
+}
