@@ -81,7 +81,9 @@
       <%end%>
     </div>
     <div class="prototype_btn_show_contents">
-      <%= link_to '戻る', root_path, class:"back_btn_show" %>
+      <%= link_to :back do %>
+        <div class="back_btn_show">戻る</div>
+      <% end %>
     </div>
   </div>
 </div>
