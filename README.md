@@ -9,19 +9,25 @@
 ## URL
 - https://searches-app-123456.herokuapp.com/
 
-## テスト用アカウント
-
-## 利用方法
-
 ## アプリケーションを開発した背景
 - 知人から課題をヒアリングし、「自分の持っている服をどうやって合わせていいかわからない」という課題が判明しました。
 課題を分析した結果、「簡単に検索できるアプリケーションがない」が真因であると仮説を立てました。
-同様の問題を抱えているユーザーも多いと推測し、真因を解決するために、コーディネートを共有しユーザー同士でコーディネートの参考にできるアプリケーションを開発することにしました。
+同様の問題を抱えているユーザーも多いと推測し、真因を解決するために、コーディネートを共有しユーザー同士でコーディネートを参考にできるアプリケーションを開発することにしました。
 
 ## 洗い出した要件
 - https://docs.google.com/spreadsheets/d/1hi3gdePxh5kB7yADKcTf05Zh2-8vjqyvhzQTjyo38ck/edit#gid=982722306
 
 ## 実装した機能についての画像やGIFおよび説明
+- ユーザー登録ができます。
+[![Image from Gyazo](https://i.gyazo.com/4133f35d2ec48871927084982d378d00.gif)](https://gyazo.com/4133f35d2ec48871927084982d378d00)
+
+- 画像を投稿できます。
+[![Image from Gyazo](https://i.gyazo.com/c70bcd3e7734802ad97bb1ad51fb7be0.gif)](https://gyazo.com/c70bcd3e7734802ad97bb1ad51fb7be0)
+[![Image from Gyazo](https://i.gyazo.com/62bdc40883595585742ac86702426fb5.gif)](https://gyazo.com/62bdc40883595585742ac86702426fb5)
+
+- お気に入りボタンで他ユーザーの投稿を評価できます。
+[![Image from Gyazo](https://i.gyazo.com/cfdd42b0886614c20f8cb3a7ad28e51f.gif)](https://gyazo.com/cfdd42b0886614c20f8cb3a7ad28e51f)
+
 
 ## 実装予定の機能
 - 検索機能
