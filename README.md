@@ -28,6 +28,13 @@
 - お気に入りボタンで他ユーザーの投稿を評価できます。
 [![Image from Gyazo](https://i.gyazo.com/cfdd42b0886614c20f8cb3a7ad28e51f.gif)](https://gyazo.com/cfdd42b0886614c20f8cb3a7ad28e51f)
 
+- 検索ができます。
+[![Image from Gyazo](https://i.gyazo.com/61ece15d6c810d74c7949228e01451e4.gif)](https://gyazo.com/61ece15d6c810d74c7949228e01451e4)
+
+- カテゴリーやカテゴリーカラーで絞って細かい検索ができます。
+[![Image from Gyazo](https://i.gyazo.com/e310c7e65c066c1919c4796877557c8f.gif)](https://gyazo.com/e310c7e65c066c1919c4796877557c8f)
+[![Image from Gyazo](https://i.gyazo.com/d30172187c7cc874b978d7a02eaec445.gif)](https://gyazo.com/d30172187c7cc874b978d7a02eaec445)
+
 
 ## 実装予定の機能
 - 検索機能
